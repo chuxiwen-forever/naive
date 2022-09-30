@@ -1,0 +1,39 @@
+server:
+  port: 8080
+spring:
+  mvc:
+    pathmatch:
+#      springBoot 2.6+ swagger
+      matching-strategy: ANT_PATH_MATCHER
+  application:
+    name: naive
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: lpj160918.
+    url: jdbc:mysql://101.43.178.138:3306/naive
+  redis:
+    host: 101.43.178.138
+    port: 6379
+    password: 160918
+    database: 0
+    timeout: 1800000
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/liu/mapper/xml/*.xml
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: abcdefghijklmnopqrstuvwxyz
+  # 令牌有效期（默认30分钟）
+  expireTime: 30
+
+geetest:
+  captchaId: 79dd60c912e16b9afc672f5790986658
+  captchaKey: d4b954d0ec45859334ce71e2c20421df
+
+
